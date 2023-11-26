@@ -1,0 +1,8 @@
+#!/usr/bin/env bash -ev
+cd ../github/obsidian-zhongwen-block
+npm run build
+DEST_DIR=../../test-vault/.obsidian/plugins/zhongwen-block
+cp manifest.json $DEST_DIR/manifest.json
+cp dist/main.js $DEST_DIR/main.js
+cp dist/styles.css $DEST_DIR/styles.css
+cd ../../test-vault
